@@ -9,6 +9,6 @@ class JobsController extends Controller
 {
     public function index(){
         $jobs = Job::all();
-        return  view('job.index', ['jobs' => $jobs ]);
+        return  view('job.index', ['jobs' => $jobs ], ["pagetitle" => 'Job page' ]);
     }
 }

@@ -1,7 +1,5 @@
-@extends('home.index')
-@section('title', 'Job Listings')
-
-@section('body')
+@section('title', $pagetitle )
+<x-layout.app :title="$pagetitle"> {{-- طريقة لاستخدم المتغيرات داخل الملف الرئيسي ---}}
     <div>
         <h1 style="text-align: center; margin-top: 5% ;" >Welcome toooooooooooooooooooooo the Nothing</h1>
         <p>
@@ -12,4 +10,5 @@
             @endforeach
         </p>
     </div>
-@endsection
+</x-layout.app>
+
