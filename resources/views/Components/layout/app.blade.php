@@ -40,13 +40,6 @@
                 </div>
             </main>
         </div>
-        <h1 class="text-3xl font-bold underline oklch(44.4% 0.177 26.899)">
-            Hello world!
-        </h1>
-
-        <div class="bg-red-500 text-white p-4">
-            {{ request()->is('/') ? 'home page' : 'not home page' }}
-        </div>
 
         {{-- Footer --}}
         {{-- <x-layout.footer /> --}}

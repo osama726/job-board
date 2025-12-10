@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\JobsController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\IndexController;
 
 // Route::get('/', function () {
@@ -22,4 +23,10 @@ Route::get('/about', [IndexController::class, 'about']);
 
 Route::get('/contact', [IndexController::class, 'contact']);
 
-Route::get('/job', [JobsController::class, 'index']);
+Route::get('/job', [JobController::class, 'index']);
+
+Route::get('/post', [PostController::class, 'index']);
+
+Route::get('/post/create', [PostController::class, 'create']);
+
+Route::get('/post/{post}', [PostController::class, 'show']);

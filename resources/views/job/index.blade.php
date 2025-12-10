@@ -11,4 +11,3 @@
         </p>
     </div>
 </x-layout.app>
-
