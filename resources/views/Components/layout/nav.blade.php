@@ -13,11 +13,12 @@
                         $current = "bg-gray-950/50 text-white";
                         $default = "text-gray-300 hover:bg-white/5 hover:text-white";
                     @endphp
-                    <a href="/" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('/') ? $current : $default }}">Home</a>
-                    <a href="/job" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('job') ? $current : $default }}">jobs</a>
-                    <a href="/post" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('post') ? $current : $default }}">Posts</a>
-                    <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('about') ? $current : $default }}">Abut</a>
-                    <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('contact') ? $current : $default }}">Contact</a>
+                    <a href="{{ route('home') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('/') ? $current : $default }}">Home</a>
+                    <a href="{{ route('job.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('job') ? $current : $default }}">jobs</a>
+                    <a href="{{ route('post.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('post') ? $current : $default }}">Posts</a>
+                    <a href="{{ route('comment.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('comment') ? $current : $default }}">Comments</a>
+                    <a href="{{ route('about') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('about') ? $current : $default }}">Abut</a>
+                    <a href="{{ route('contact') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('contact') ? $current : $default }}">Contact</a>
                 </div>
             </div>
         </div>
@@ -39,11 +40,12 @@
 
     <el-disclosure id="mobile-menu" hidden class="block md:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-                    <a href="/" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('/') ? $current : $default }}">Home</a>
-                    <a href="/job" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('job') ? $current : $default }}">jobs</a>
-                    <a href="/post" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('post') ? $current : $default }}">Posts</a>
-                    <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('about') ? $current : $default }}">Abut</a>
-                    <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('contact') ? $current : $default }}">Contact</a>
+                    <a href="{{ route('home') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('/') ? $current : $default }}">Home</a>
+                    <a href="{{ route('job.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('job') ? $current : $default }}">jobs</a>
+                    <a href="{{ route('post.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('post') ? $current : $default }}">Posts</a>
+                    <a href="{{ route('comment.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('comment') ? $current : $default }}">Comments</a>
+                    <a href="{{ route('about') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('about') ? $current : $default }}">Abut</a>
+                    <a href="{{ route('contact') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('contact') ? $current : $default }}">Contact</a>
         </div>
         <div class="border-t border-white/10 pt-4 pb-3">
             <div class="flex items-center px-5">

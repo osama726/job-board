@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\IndexController;
 
 // Route::get('/', function () {
@@ -17,16 +18,24 @@ use App\Http\Controllers\IndexController;
 //     return view('contact');
 // });
 
-Route::get( '/' , [IndexController::class, 'index'] );
+Route::get( '/' , [IndexController::class, 'index'] )->name('home');
 
-Route::get('/about', [IndexController::class, 'about']);
+Route::get('/about', [IndexController::class, 'about'])->name('about');
 
-Route::get('/contact', [IndexController::class, 'contact']);
+Route::get('/contacts', [IndexController::class, 'contact'])->name('contact');
 
-Route::get('/job', [JobController::class, 'index']);
+Route::get('/jobs', [JobController::class, 'index'])->name('job.index');
 
-Route::get('/post', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])->name('post.index');
 
-Route::get('/post/create', [PostController::class, 'create']);
+Route::get('/posts/create', [PostController::class, 'create'])->name('post.create');
 
-Route::get('/post/{post}', [PostController::class, 'show']);
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('post.show');
+
+Route::delete('/posts/delete/{post}', [PostController::class, 'destroy'])->name('post.destroy');
+
+Route::get('/comments', [CommentController::class, 'index'])->name('comment.index');
+
+Route::get('/comments/create', [CommentController::class, 'create'])->name('comment.create');
+
+Route::get('/comments/{post}', [CommentController::class, 'show'])->name('comment.show');

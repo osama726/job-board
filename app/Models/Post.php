@@ -10,4 +10,8 @@ class Post extends Model
     protected $fillable = [ 'title', 'content', 'published' ]; // Allow mass assignment for these fields
 
     protected $guarded = ['id']; // Prevent mass assignment for the 'id' field
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
 }
